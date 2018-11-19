@@ -77,7 +77,14 @@ document.querySelector('#Header use').style.fill = 'white';
 
 let i = 0;
 
-const options = {month: 'short', day: '2-digit', hour:'2-digit', minute: '2-digit'};
+const options = {weekday: 'short', month: 'short', day: '2-digit', hour:'2-digit', minute: '2-digit'};
+
+// TODO: Too tired to fix
+let e = document.querySelector(`#Row-10 > .H.Seat`);
+e.style.fill = 'transparent';
+e.style.stroke = 'transparent';
+e = document.querySelector(`#Row-10 > .H.Desk`);
+e.style.fill = colors[0];
 
 let f = () => {
     let s = new Date(data[i][0]*1000).toLocaleString('en-US', options).replace(',', '');
@@ -93,4 +100,4 @@ let f = () => {
 };
 
 f();
-setInterval(f, 200);
+setInterval(f, 100);
