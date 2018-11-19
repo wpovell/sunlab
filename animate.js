@@ -96,7 +96,7 @@ let f = () => {
         setLocal(row, col, v[2] != 0);
         setRemote(row, col, colors[v[3]]);
     }
-    i++;
+    i = (i + 1) % data.length;
 };
 
 f();
