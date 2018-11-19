@@ -93,6 +93,21 @@ let f = () => {
         let v = data[i][1][j];
         let row = v[0];
         let col = v[1];
+
+        if (row == 2) {
+            if (col == 'A' || col == 'B' || col == 'C') {
+
+            } else if (col == 'D') {
+                col = 'F';
+            } else if (col == 'E') {
+                col = 'G';
+            } else if (col == 'F') {
+                col = 'H';
+            } else {
+                continue;
+            }
+        }
+
         setLocal(row, col, v[2] != 0);
         setRemote(row, col, colors[v[3]]);
     }
